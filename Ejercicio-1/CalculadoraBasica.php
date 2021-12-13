@@ -159,7 +159,7 @@ echo "
             <input type='submit' value='mrc' name='mrc' />
             <input type='submit' value='m-' name='m-' />
             <input type='submit' value='m+'  name='m+'/>
-            <input type='submit' value='/' ' name='/'/>
+            <input type='submit' value='/'  name='/'/>
 <!--Segunda fila de botones-->
             <input type='submit' value='7'  name='7'/>
             <input type='submit' value='8'  name='8'/>

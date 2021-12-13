@@ -1,0 +1,75 @@
+/*Selector Specificity: (0, 0, 1)*/
+body {
+    font-family: "Monaco" , sans-serif; 
+    color: #FFFF; 
+    background-color:#000000; 
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 15%;
+ }
+ 
+ /*Selector Specificity: (0, 0, 1)*/
+h1 {
+    color: #fff; 
+    font-family: "Monaco" , sans-serif; 
+    background-color:#4700B3; 
+    text-align: center;  
+}
+
+/*Selector Specificity: (0, 0, 1)*/
+h2,h3{
+    text-align: justify;
+    font-size: medium;
+    color: #fff; 
+    background-color: crimson; 
+    font-family: "Monaco" , sans-serif;
+    
+}
+
+
+
+
+/*Selector Specificity: (0, 0, 1)*/
+section {
+    
+    text-align: center;
+}
+
+
+/*Selector Specificity: (0, 0, 1)*/
+p {
+    text-align: justify;
+}
+
+
+/*Selector Specificity: (0, 1, 1)*/
+input {
+    grid-column: span 2;
+    background-color: #4700B3;
+    color: #fff;
+    visibility: visible;
+}
+
+
+
+/*Selector Specificity: (0, 0, 1)*/
+
+label{
+    grid-column: span 1;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+
+}
+/*Selector Specificity: (0, 0, 1)*/
+form{
+
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2%;
+    row-gap: 3%;
+
+
+}
+
