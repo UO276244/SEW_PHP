@@ -52,14 +52,7 @@ input {
 
 
 
-/*Selector Specificity: (0, 0, 1)*/
 
-label{
-    grid-column: span 1;
-    background-color: #000000;
-    color: rgb(255, 255, 255);
-
-}
 /*Selector Specificity: (0, 0, 1)*/
 form{
 
@@ -70,6 +63,19 @@ form{
     column-gap: 2%;
     row-gap: 3%;
 
+
+}
+
+/*Selector Specificity: (0, 0, 1)*/
+
+label{
+    border: 0.075em solid rgb(88, 86, 86);
+    border-radius: 1em;
+    grid-column: span 1;
+    text-align: center;
+    background-color: #df0560;
+    color: rgb(0, 0, 0);
+   
 
 }
 

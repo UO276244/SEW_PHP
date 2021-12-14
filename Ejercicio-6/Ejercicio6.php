@@ -365,8 +365,18 @@ class BaseDatos{
         $this->db->select_db($this->currentDB);
 
        
+        $fileName = $_FILES["file"]["tmp_name"];
+
+       
+       
+        if($_FILES["file"]["type"] != "application/vnd.ms-excel"){
+            $this->lastDone = "<p>Archivo con formato incorrecto o no subido.</p>";
+            return;
+        }
+        
+        
           
-        $fileName = basename('pruebasUsabilidad.csv');
+       // $fileName = basename('pruebasUsabilidad.csv');
         $filePath = ''.$fileName;
         if(!empty($fileName) && file_exists($filePath)){
             $file = fopen($fileName, "r");
@@ -460,7 +470,7 @@ echo "<!DOCTYPE HTML>
 <body>
 
     <h1>GESTION DE BASE DE DATOS</h1>
-    <form action='#' method='post' name='basedatos'>
+    <form action='#' method='post' name='basedatos' enctype='multipart/form-data'>
 
         <input type='submit' value='Crear Base de Datos' name='crearBD' />
         <input type='submit'  value='Crear Tabla' name='crearTabla'/>
@@ -471,7 +481,11 @@ echo "<!DOCTYPE HTML>
         <input type='submit' value='Borrar todos los datos de la tabla' name='borrar' />
         <input type='submit' value='Generar Informe' name='informe' />
         <input type='submit' value='Descargar CSV' name='descargar' />
-        <input type='submit' value='Subir CSV' name='subir' />
+        
+
+        <label for='archivo'>SUBIR CSV</label><br>
+        <input type='file' id='archivo' name='file'/>
+        <input type='submit' value='Insertar datos del CSV' name='subir' />
 
         
         
