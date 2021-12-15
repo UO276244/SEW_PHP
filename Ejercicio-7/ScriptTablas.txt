@@ -1,0 +1,41 @@
+CREATE DATABASE  IF NOT EXISTS db_sew_php_ej7 COLLATE utf8_spanish_ci ;
+CREATE TABLE if not exists`Autor` (
+	
+	`Nombre_autor` varchar(255) NOT NULL,
+    `AutorId` varchar(255) NOT NULL ,
+	`Apellidos` varchar(255) NOT NULL,
+	`Edad` INT(255) NOT NULL,
+	
+	PRIMARY KEY (`AutorId`)
+);
+
+CREATE TABLE if not exists `Libro` (
+	`ISBN` varchar(255) NOT NULL,
+	`Titulo` varchar(255) NOT NULL,
+	`Autor` varchar(255) NOT NULL,
+	`Año_publicacion` INT(255) NOT NULL,
+	`Editorial` varchar(255) NOT NULL,
+`Agotado` BOOLEAN NOT NULL,
+	PRIMARY KEY (`ISBN`)
+);
+
+CREATE TABLE if not exists `Editorial` (
+	`EditorialId` varchar(255) NOT NULL,
+	`Empresa` varchar(255) NOT NULL,
+	`Director` varchar(255) NOT NULL,
+	PRIMARY KEY (`EditorialId`)
+);
+
+CREATE TABLE if not exists `PublicadoEn` (
+	`Libro_ISBN` varchar(255) NOT NULL,
+	`Pais` varchar(255) NOT NULL,
+	`Edicion` INT(255) NOT NULL,
+	PRIMARY KEY (`Libro_ISBN`,`Pais`)
+);
+
+ALTER TABLE `Libro` ADD CONSTRAINT `Libro_fk0` FOREIGN KEY (`Autor`) REFERENCES `Autor`(`AutorId`);
+
+ALTER TABLE `Libro` ADD CONSTRAINT `Libro_fk1` FOREIGN KEY (`Editorial`) REFERENCES `Editorial`(`EditorialId`);
+
+ALTER TABLE `PublicadoEn` ADD CONSTRAINT `PublicadoEn_fk0` FOREIGN KEY (`Libro_ISBN`) REFERENCES `Libro`(`ISBN`);
+

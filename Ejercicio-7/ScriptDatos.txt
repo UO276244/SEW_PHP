@@ -1,0 +1,9 @@
+INSERT INTO `autor` (`Nombre_autor`, `AutorId`, `Apellidos`, `Edad`) VALUES ('Arturo', '1', 'Perez-Reverte', '70');
+INSERT INTO `autor` (`Nombre_autor`, `AutorId`, `Apellidos`, `Edad`) VALUES ('Gustavo', '2', 'Adolfo Bécquer', '151');
+INSERT INTO `autor` (`Nombre_autor`, `AutorId`, `Apellidos`, `Edad`) VALUES ('Richard', '3', 'Helm', '81');
+INSERT INTO `autor` (`Nombre_autor`, `AutorId`, `Apellidos`, `Edad`) VALUES ('Dan', '4', 'Slott', '54');
+
+INSERT INTO `editorial` (`EditorialId`, `Empresa`, `Director`) VALUES ('1', 'PANINI', 'Julian M. Clemente'), ('2', 'ALFAGUARA', 'Jesus Beltran'), ('3', 'ORILLEY', 'David Broncano'), ('4', 'MAMUT', 'Jhon Bon Dia');
+INSERT INTO `libro` (`ISBN`, `Titulo`, `Autor`, `Año_publicacion`, `Editorial`,`Agotado`) VALUES ('1', 'El italiano', '1', '2020', '2',true), ('2', 'Rimas y leyendas', '2', '1926', '4',false), ('3', 'Spiderman', '4', '2021', '1',false);
+
+INSERT INTO `publicadoen` (`Libro_ISBN`, `Pais`, `Edicion`) VALUES ('3', 'España', '23'), ('2', 'Noruega', '1'), ('1', 'Francia', '4');

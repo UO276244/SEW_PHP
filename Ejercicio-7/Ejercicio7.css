@@ -1,0 +1,103 @@
+/*Selector Specificity: (0, 0, 1)*/
+body {
+    font-family: "Monaco" , sans-serif; 
+    color: #FFFF; 
+    background-color:#000000; 
+    display: grid;
+    row-gap: 5%;
+    
+ }
+ 
+ /*Selector Specificity: (0, 0, 1)*/
+h1 {
+    color: #fff; 
+    font-family: "Monaco" , sans-serif; 
+    background-color:#4700B3; 
+    text-align: center;  
+}
+
+/*Selector Specificity: (0, 0, 1)*/
+h2{
+    text-align: center;
+    font-size: medium;
+    color: #fff; 
+    background-color: crimson; 
+    font-family: "Monaco" , sans-serif;
+    grid-column: span 2;
+    margin-top: 6%;
+    
+}
+
+
+
+
+/*Selector Specificity: (0, 0, 1)*/
+img{
+    width: auto;
+    height: 12em;
+}
+
+
+ul li{
+
+    text-align: left;
+}
+
+/*Selector Specificity: (0, 0, 1)*/
+section {
+    
+    text-align: center;
+   
+
+}
+/*Selector Specificity: (0, 0, 2)*/
+section section{
+
+    text-align: center;
+    display: grid;
+    grid-template-columns: 0.4fr 0.8fr;
+    border-style: dashed ;
+    border-color: blueviolet;
+    margin-top: 0.5%;
+margin-bottom: 0.5;
+
+}
+
+
+/*Selector Specificity: (0, 0, 1)*/
+p {
+    text-align: justify;
+    
+}
+
+
+/*Selector Specificity: (0, 1, 1)*/
+input {
+    grid-column: span 2;
+    background-color: #4700B3;
+    color: #fff;
+    visibility: visible;
+}
+
+
+
+
+/*Selector Specificity: (0, 0, 1)*/
+form{
+
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2%;
+    row-gap: 3%;
+
+
+}
+
+/*Selector Specificity: (0, 0, 1)*/
+
+label{
+    text-align: left;
+}
+

@@ -11,7 +11,7 @@ class BaseDatos{
     protected $currentDB;
     protected $eliminarNotasNoAprobadas;
 
-    public function __constructor(){
+    public function __construct(){
 
         
         
@@ -456,7 +456,7 @@ echo "<!DOCTYPE HTML>
     <!-- Datos que describen el documento -->
 
     <meta charset='UTF-8' />
-    <title>Ejercicio 4</title>
+    <title>Ejercicio 6</title>
     <link rel='stylesheet' type='text/css' href='Ejercicio6.css' />
     
 
