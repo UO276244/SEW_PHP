@@ -27,6 +27,16 @@ h2{
     margin-top: 6%;
     
 }
+h3{
+    text-align: left;
+    font-size: smaller;
+    color: #fff; 
+    background-color: #0000FF;
+    font-family: "Monaco" , sans-serif;
+    grid-column: span 2;
+    margin-top: 6%;
+    
+}
 
 
 

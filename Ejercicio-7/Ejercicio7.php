@@ -45,9 +45,11 @@ class EditorialManager{
             $resultPubl = $queryForPublicado->execute();
             $resultPubl = $queryForPublicado->get_result();
 
+            $count = $count + 1;
+
             $imgFileName = 'multimedia/img' .  $row['ISBN'] . '.jpg';
             
-            $this->currentResult .= "<section><img src='".$imgFileName ."' alt='imagen" . $row['Titulo'] . "'/>";
+            $this->currentResult .= "<section><h3>Resultado ". $count . "</h3><img src='".$imgFileName ."' alt='imagen" . $row['Titulo'] . "'/>";
             $this->currentResult .= "<ul> <li>Titulo: " .  $row['Titulo'] ."</li> <li>Autor: " .  $row['Nombre_autor'] ." " . $row['Apellidos'] . "</li>" ;
             $this->currentResult .= "<li>Editorial: " .  $row['Empresa']. "</li>";
             $this->currentResult .= "<li>Año publicacion: " .  $row['Año_publicacion']. "</li>";
@@ -68,7 +70,7 @@ class EditorialManager{
 
             $this->currentResult .= " </ul></section>";
 
-            $count = $count + 1;
+           
 
         }
 
@@ -158,15 +160,15 @@ class EditorialManager{
         $this->currentResult = '';
         while($row = $result->fetch_array()){
 
-           
+            $count = $count + 1;
             $imgFileName = 'multimedia/imgEd' .  $row['EditorialId'] . '.jpg';
             
-            $this->currentResult .= "<section><img src='".$imgFileName ."' alt='imagen " . $row['Empresa'] . "'/>";
+            $this->currentResult .= "<section><h3>Resultado ". $count . "</h3><img src='".$imgFileName ."' alt='imagen " . $row['Empresa'] . "'/>";
             $this->currentResult .= "<ul> <li>Nombre: " .  $row['Empresa'] ."</li><li>Director: " . $row['Director'] . "</li>" ;
 
             $this->currentResult .= " </ul></section>";
 
-            $count = $count + 1;
+           
 
         }
 
@@ -235,18 +237,18 @@ class EditorialManager{
         $count = 0;
         $this->currentResult = '';
         while($row = $result->fetch_array()){
-
+            $count = $count + 1;
            
             $imgFileName = 'multimedia/imgAutor' .  $row['AutorId'] . '.jpg';
             
-            $this->currentResult .= "<section><img src='".$imgFileName ."' alt='imagen" . $row['Nombre_autor'] . "'/>";
+            $this->currentResult .= "<section><h3>Resultado ". $count . "</h3><img src='".$imgFileName ."' alt='imagen" . $row['Nombre_autor'] . "'/>";
             $this->currentResult .= "<ul> <li>Nombre: " .  $row['Nombre_autor'] ."</li><li>Apellidos: " . $row['Apellidos'] . "</li>" ;
             $this->currentResult .= "<li>Edad: " .  $row['Edad']. "</li>";
            
 
             $this->currentResult .= " </ul></section>";
 
-            $count = $count + 1;
+            
 
         }
 
